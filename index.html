@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" href="imagenes/nota.png" />
+        <title>Musindi | Lucas Rosi</title>
+    </head>
+
+
+    <body class="fondobody">
+        <div class="cambios">
+            <header class="container-fluid fondoheader h-100 mb-5">
+                <h1 v-once class="logo">{{titulo}}</h1>
+                    <div class="row">
+                        <nav class="col px-md-5 navbar fixed-top navbar-expand-md navbar-dark fondoheader">
+                            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#barra" aria-controls="barra" aria-expanded="false" aria-label="Menú Hamburguesa">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="barra">
+                                <ul class="navbar-nav text-center ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">INICIO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="productos.html">PRODUCTOS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link"  href="contacto.html">CONTACTO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="imagenes/elCarrito.svg" alt="Carrito de compras" class="elCarrito ml-md-3 mt-1" /></a>
+                                    </li>
+                                    
+                                </ul>
+                               
+                            </div>
+                            
+                        </nav>
+                        
+                    </div>
+            </header>
+
+
+
+            <section id="galeria" class="container-fluid carousel slide" data-ride="carousel" data-interval = "4000">
+                <h2 v-show="ver">Banner música rock alternativo</h2>
+                <div class="row">
+                    <ol class="carousel-indicators pb-4">
+                        <li data-target="#galeria" data-slide-to="0" class="active"></li>
+                        <li data-target="#galeria" data-slide-to="1"></li>
+                        <li data-target="#galeria" data-slide-to="2"></li>
+                    </ol>
+            
+                    <div class="carousel-inner">
+                        <figure class="carousel-item active">
+                            <picture>
+                                <source media="(max-width: 599px)" :srcset="imgSlider1Celular">
+                                <source media="(max-width: 800px)" :srcset="imgSlider1Tablet">    
+                                <img class="d-block w-100" :src="imgSlider1Pc" alt="música" />
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block pt-2">
+                                <h2 v-html="h2Slider1"></h2>
+                                <p v-html="pSlider1"></p>
+                            </div>
+                        </figure>
+                        <figure class="carousel-item">
+                            <picture>
+                                <source media="(max-width: 599px)" :srcset="imgSlider2Celular">
+                                <source media="(max-width: 800px)" :srcset="imgSlider2Tablet"> 
+                                <img class="d-block w-100" :src="imgSlider2Pc" alt="música" />
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block pt-2">
+                                <h2 v-html="h2Slider2"></h2>
+                                <p v-html="pSlider2"></p>
+                            </div>
+                        </figure>
+                        <figure class="carousel-item">
+                            <picture>
+                                <source media="(max-width: 599px)" :srcset="imgSlider3Celular">
+                                <source media="(max-width: 800px)" :srcset="imgSlider3Tablet"> 
+                                <img class="d-block w-100" :src="imgSlider3Pc" alt="música" />
+                            </picture>
+                            <div class="carousel-caption d-none d-md-block pt-2">
+                                <h2 v-html="h2Slider3"></h2>
+                                <p v-html="pSlider3"></p>
+                            </div>
+                        </figure>
+                    </div>
+            
+                    <a class="carousel-control-prev" href="#galeria" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+            
+                    <a class="carousel-control-next" href="#galeria" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </section>
+
+    
+            
+            <section class="container mt-5 pt-5">
+                <article class="row text-center">
+                    <div class="col-12 px-5">
+                        <h2 class="h1 mb-5 pb-5">Nuestros servicios</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <figure>
+                                    <img :src="imgPagoSeguro" alt="Pago seguro" />
+                                </figure>
+                                <h3>Pago Seguro</h3>
+                                <p :class="[textoGris, pPagoSeguro]">Podes confíar en nosotros para realizar todas tus compras de forma segura.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img :src="imgEnvioGlobal" alt="envío global" />
+                                </figure>
+                                <h3>Envío Global</h3>
+                                <p :class="[textoGris, pPagoSeguro]">Estamos enviando tus instrumentos a cualquier país del mundo en el que te encuentres.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img :src="imgEntregaRapida" alt="Entrega Rápida">
+                                </figure>
+                                <h3>Entrega Rápida</h3>
+                                <p :class="[textoGris, pPagoSeguro]">Te proporcionamos la mejor y más rápida entrega de todo el mundo.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="button" class="btn btnservicios mb-5">MÁS INFO ...</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+            <section class="container py-5 mt-5 px-5">
+                <article class="row mt-2">
+                    <div class="col-12">
+                        <h2 class="text-center h1 mt-5">¿Por qué elegirnos?</h2>
+                        <div class="row">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <figure>
+                                    <picture>
+                                        <source media="(max-width: 599px)" :srcset="imgBandaCelular">
+                                        <source media="(max-width: 800px)" :srcset="imgBandaTablet">
+                                        <img :src="imgBandaPc" class="img-fluid" alt="Banda de música" />
+                                    </picture>
+                                </figure>
+                            </div>
+
+                            <div class="col-md-6 mt-lg-5 pt-md-5">
+                                <h3 class="my-5 text-center text-md-start">Te ofrecemos excelencia:</h3>
+                                <div class="d-flex justify-content-center justify-content-lg-start ml-md-5 pl-md-5">
+                                    <ul class="pl-3 pl-md-0">
+                                    <li v-for="x in beneficios">{{x}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+      
+        
+
+            <footer class="container-fluid fondofooter text-white">
+                <div class="row d-flex justify-content-around align-items-center">
+                    <div class="col-lg-10 mt-5">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-sm-8 col-md-6 pb-lg-4 pl-3">
+                                <p class="text pb-3">Información adicional de Musindi:</p>
+                                <p class="datos colorletras">Somos una empresa con 30 años de trayectoria. Nos orientamos a los apasionados de la música.</p>
+                                <p class="logofooter mb-5 mb-sm-1 ml-5">Musindi</p>
+                            </div>
+
+                            <div class=" col-sm-8 col-md-6 pl-3 pl-md-5">
+                                <p class="text pb-3">Información de la tienda:</p>
+                                <ul class="ulredes mb-5">
+                                    <li class="my-1">MUSINDI</li>
+                                    <li class="mb-1">Calle falsa 123 - CABA</li>
+                                    <li class="mb-1">Ciudad de Buenos Aires - Argentina</li>
+                                    <li class="mb-1">Llamanos: 11 9999 9999</li>
+                                    <li class="mb-1">Envianos un correo electrónico:</li>
+                                    <li>instrumentos@musindi.com.ar</li>
+                                </ul>
+                                <div class="pb-5 mt-5 mt-sm-1">
+                                    <ul class="ulredes d-flex flex-wrap flex-sm-nowrap">
+                                        <li class="my-1 px-3 px-sm-2"><a href="https://es-la.facebook.com/" target="_blank"><img class="redes" src="imagenes/facebook.png" alt="facebook"></a></li>
+                                        <li class="my-1 px-3 px-sm-2"><a href="https://twitter.com/login?lang=es" target="_blank"><img class="redes" src="imagenes/twitter.png" alt="twitter"></a></li>
+                                        <li class="my-1 px-3 px-sm-2"><a href="https://web.whatsapp.com/" target="_blank"><img class="redes" src="imagenes/whatsapp.png" alt="whatsapp"></a></li>
+                                        <li class="my-1 px-3 px-sm-2"><a href="https://www.youtube.com/" target="_blank"><img class="youtube" src="imagenes/youtube.png" alt="youtube"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="copy w-100 pt-2 colorletras" id="info">
+                        <p class="mx-5">© copyright 2020 Todos los Derechos Reservados | Musindi</p>
+                    </div>
+
+                </div> 
+
+            </footer>
+
+        
+        </div>
+        
+       
+        
+            <script src="js/jquery-3.5.1.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+
+
+            
+
+            <!--VUE.JS-->
+            <script src="js/vue.js"></script>
+            <script src="js/app.js"></script>
+
+            <!--SERVICE WORKER-->
+            <script src="js/scriptsw.js"></script>
+
+
+
+            
+            <script>
+                $('.nav-item').on('click', function() {
+                    $(".navbar-collapse").collapse("hide");
+                })
+            </script>
+
+
+            <script>
+                document.createElement("picture");
+            </script>
+            <script src="js/picturefill.js"></script>
+
+            <script>
+                $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+                })
+            </script>
+
+      
+    </body>
+</html>

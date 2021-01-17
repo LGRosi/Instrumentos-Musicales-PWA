@@ -1,0 +1,239 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.fondobody {
+    background: white;
+}
+
+
+.fondoheader, .fondofooter {
+    background: #551d74;
+}
+
+.fondoaside {
+    background: #f7f7f7;
+    border-radius: 20px;
+}
+
+
+
+/*CAMBIOS VUE*/
+.textogris {
+    color:rgb(109, 109, 109);
+}
+.tamañotextogris {
+    font-size: 15px;
+}
+.checkboxactivo {
+    color: #551d74;
+}
+.checkboxdesactivado {
+    color: blue;
+}
+
+
+
+.elCarrito {
+    width: 25px;
+    height: 25px;
+}
+
+.logo {
+    width: 160px;
+    height: 90px;
+    background: url("../imagenes/logo.svg") center center no-repeat;
+    font-size: 0;
+    position: fixed;
+    top: -12px;
+    left: 40px;
+    z-index: 2000;
+}
+
+header {
+    max-width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.h20 {
+    display: none;
+}
+
+.carousel-indicators li {
+    width: 25px;
+    height: 15px;
+    border-radius: 100%;
+    background: white;
+    border: 0;
+}
+
+.carousel-indicators .active {
+    background: rgb(131, 25, 163) ;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 60px;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+}
+
+.fondoblancoinstr {
+    background: white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    box-shadow: 1px 1px 5px #666;
+}
+
+.sectionredondiado {
+    border-radius: 20px;
+}
+
+
+figure {
+    max-width: 100%;
+}
+
+
+.imgradius {
+    border-radius: 40px;
+}
+
+
+.section2 {
+    background:#f7f7f7;
+}
+
+.textcolor {
+    color: rgb(172, 29, 216);
+}
+
+.ulredes {
+    list-style: none;
+    display: inline-block;
+    margin: auto;
+}
+
+.redes {
+    width: 30px;
+    height: 30px;
+}
+
+.youtube {
+    width: 33px;
+    height: 33px;
+}
+
+.logofooter {
+    width: 200px;
+    height: 200px;
+    background: url("../imagenes/logofooter.svg") center center no-repeat;
+    font-size: 0;
+    margin: auto;
+}
+
+.datos {
+    list-style: none;
+    font-size: 18px;
+}
+
+textarea {
+    resize: none;
+}
+
+.copy {
+    text-align: center;
+    line-height: 30px;
+    background: #1c1c1c;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.form {
+    border-radius: 20px;
+}
+
+.colorbotonfooter {
+    background: #551d74;
+    color: white;
+    font-size: 20px;
+}
+
+.form2 {
+    border-radius: 15px;
+}
+
+.colorletras {
+    color: rgb(233, 231, 231);
+}
+
+.colorletraslabel {
+    color: black;
+}
+
+
+.tachado {
+    text-decoration: line-through;
+    font-size: 20px;
+    opacity: .6;
+}
+
+.colorprecio {
+    color: #660099;
+    font-size: 20px;
+}
+
+.tamañotxt {
+    font-size: 22px;
+}
+
+.stars {
+    width: 80px;
+    height: 20px;
+    background: url("../imagenes/stars.svg") center center no-repeat;
+    font-size: 0;
+}
+
+.btnborde {
+    border: 1px solid #660099;
+    color: #660099;
+    font-size: 14px;
+    border-radius: 15px;
+    
+}
+
+.envio {
+    width: 60px;
+    height: 60px;
+    color: #660099;
+}
+
+.lainfo {
+    opacity: .6;
+}
+
+.colorboton {
+    background: #660099;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px;
+}
+
+.btnservicios {
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #660099;
+    color:white;
+
+}
+
+.radiusimgaside {
+    border-radius: 15px;
+}
